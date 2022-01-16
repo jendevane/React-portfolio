@@ -10,7 +10,7 @@ function links()  {
 function nav() {
     return (
         <div className='home'>
-            <Navbar expand='lg'>
+            <Navbar className= 'Nav-styles' expand='lg'>
             <Navbar.Brand href="#">Jennifer Devane</Navbar.Brand>     
                 <Navbar.Toggle aria-controls="offcanvasNavbar" />
                 <Navbar.Collapse>
