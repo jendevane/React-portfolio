@@ -1,11 +1,11 @@
 import React from 'react';
 import './AboutMe.css';
-import { Jennyphoto } from "../../assets/Images/Jennyphoto.jpg"
+import Jennyphoto from "../../assets/Images/Jennyphoto.jpg"
 function AboutMe() {
   return (
     <div className="about-styles" id="about-me">
      <div>
-      <img src={ Jennyphoto } alt="Jennyphoto.png"/>
+      <img className= "photo" src={ Jennyphoto } alt="Jennyphoto.png"/>
      </div>
      <div className="about-message">
        <h1>ABOUT ME</h1>
