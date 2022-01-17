@@ -1,5 +1,6 @@
 import React from 'react';
-import { Project } from "./Project"
+import Project  from "../Projects/Project.js"
+
 import {ProjectL} from "../../helpers/ProjectL"
 
 
@@ -13,9 +14,9 @@ function ProjectList() {
                 </p>
 
             </div>
-            <div className='pj lists'>
-                {Project.map((item) => (
-                     < ProjectL />
+            <div>
+                {ProjectL.map((item) => (
+                    < Project key={item.id} img={item.img} link={item.link}/>
                  ))}
                 
                 

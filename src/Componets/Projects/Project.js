@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Project() {
+const Project = ({img,link}) =>{
     return (
         <div className='p'>
-            <a href='http://lana.dev' target="_blank" rel="noreferrer">
-                <img src="" alt="" className="p-img" />
+            <a href={link} target="_blank" rel="noreferrer">
+                <img src={img} alt="" className="p-img" />
             </a>
 
             
