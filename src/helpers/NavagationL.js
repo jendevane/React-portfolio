@@ -8,8 +8,8 @@ export const NavagationL = [
       ref: '#about-me'
     },
     {
-      name: 'TECHNOLOGIES',
-      ref: '#technologies'
+      name: 'Resume',
+      ref: '#resume'
     },
     {
       name: 'PORTFOLIO',

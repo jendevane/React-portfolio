@@ -1,8 +1,18 @@
 .photo {
     max-width: 15%;
     border-radius: 50%;
-    
-}
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        
+        padding: 10px;
+      }
+
 .about-message {
-    align-items: left;
-}
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 80px;
+    border-color: rgb(31, 28, 34);
+   background-color: rgb(201, 174, 226);
+  }

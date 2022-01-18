@@ -3,12 +3,12 @@ import emailjs from '@emailjs/browser';
 
 
 
-const contact = () => {
+const Contact = () => {
     const ref = useRef();
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', ref.current, 'YOUR_USER_ID')
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -16,7 +16,8 @@ const contact = () => {
             });
     };
     return (
-        <div className="contact">
+    
+      <div className="contact" id='contact'>
             <div className="contact-bg"></div>
             <div className='contact-wrapper'>
                 <div className='contact-left'></div>
@@ -56,4 +57,4 @@ const contact = () => {
     );
 }
 
-export default contact
+export default Contact

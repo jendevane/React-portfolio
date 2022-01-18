@@ -1,5 +1,6 @@
 import React from 'react';
 import Project  from "../Projects/Project.js"
+import './pro.css';
 
 import {ProjectL} from "../../helpers/ProjectL"
 
