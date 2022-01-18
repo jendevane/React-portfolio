@@ -1,13 +1,20 @@
-import { useRef } from 'react'
+import React, { useRef } from 'react'
+import emailjs from '@emailjs/browser';
 
 
-function contact() {
-    const Ref = useRef()
-    const focusInput = () => {
-        Ref.current.focus();
-      };
-    const handleSubmit = (e) =>
+
+const contact = () => {
+    const ref = useRef();
+
+    const handleSubmit = (e) => {
         e.preventDefault();
+        emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
     return (
         <div className="contact">
             <div className="contact-bg"></div>
@@ -22,31 +29,31 @@ function contact() {
                         Email:contact@contact.com
                     </div>
                 </div>
-                </div>
+            </div>
             <div className='contact-right'>
                 <p className='contact-description'>
                     <b>Wanna reach out?</b>
                 </p>
-                <form ref={Ref}> onSubmit={handleSubmit}
-                    <input type="text" placeholder='name' name='user_name'/>
-                    <input type="text" placeholder='subject' name='user_subject'/>
+                <form ref={ref} onSubmit={handleSubmit}>
+                    <input type="text" placeholder='name' name='user_name' />
+                    <input type="text" placeholder='subject' name='user_subject' />
                     <input type="text" placeholder='Email' name='user_email' />
                     <textarea rows="7" placeholder="message" name='message' />
-                    <button onClick={focusInput}> Send </button>
+                    <button> Send </button>
                 </form>
-                
-                    </div>
-                
-            </div>
-            
-                        
-                    
-                
 
-            
-            
-        
-    )
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    );
 }
 
 export default contact
