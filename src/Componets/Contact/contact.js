@@ -1,7 +1,11 @@
 import { useRef } from 'react'
-import '/contact.css'
+
+
 function contact() {
-    const Ref = useRef(null)
+    const Ref = useRef()
+    const focusInput = () => {
+        Ref.current.focus();
+      };
     const handleSubmit = (e) =>
         e.preventDefault();
     return (
@@ -28,7 +32,7 @@ function contact() {
                     <input type="text" placeholder='subject' name='user_subject'/>
                     <input type="text" placeholder='Email' name='user_email' />
                     <textarea rows="7" placeholder="message" name='message' />
-                    <button>Send</button>
+                    <button onClick={focusInput}> Send </button>
                 </form>
                 
                     </div>
