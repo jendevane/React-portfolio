@@ -20,8 +20,8 @@ const Contact = () => {
       <div className="contact" id='contact'>
             <div className="contact-bg"></div>
             <div className='contact-wrapper'>
-                <div className='contact-left'></div>
-                <h1> contact me</h1>
+                <div className='contact-left'><h1> contact me</h1></div>
+
                 <div className='contact-info'>
                     <div className='contact-info-item'>
                         Phone:999-999-999
@@ -32,10 +32,10 @@ const Contact = () => {
                 </div>
             </div>
             <div className='contact-right'>
-                <p className='contact-description'>
+                <div className='contact-description'>
                     <b>Wanna reach out?</b>
-                </p>
-                <form ref={ref} onSubmit={handleSubmit}>
+                </div>
+                <form ref={ref} onSubmit={handleSubmit} className='contact-form'>
                     <input type="text" placeholder='name' name='user_name' />
                     <input type="text" placeholder='subject' name='user_subject' />
                     <input type="text" placeholder='Email' name='user_email' />
@@ -44,17 +44,9 @@ const Contact = () => {
                 </form>
 
             </div>
-
         </div>
-
-
-
-
-
-
-
-
     );
 }
 
 export default Contact
+
